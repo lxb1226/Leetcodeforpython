@@ -11,13 +11,13 @@ class Solution:
             1.如果strs中存在string比当前长度i还小,那么返回strs[0][:i]
             2.如果strs存在index字符与LCP字符不同，则返回上一个LCP,返回strs[0][:i]
         """
-        # if not strs:
-        #     return ''
-        # for i in range(len(strs[0])):
-        #     for str in strs:
-        #         if len(str)<=i or strs[0][i] != str[i]:
-        #             return strs[0][:i]
-        # return str[0]
+        if not strs:
+            return ''
+        for i in range(len(strs[0])):
+            for str in strs:
+                if len(str)<=i or strs[0][i] != str[i]:
+                    return strs[0][:i]
+        return str[0]
 
         """
         解法二：创建一个len(strs)大小的列表，里面全是strs[0]
