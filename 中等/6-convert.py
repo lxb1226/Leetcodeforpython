@@ -4,6 +4,4 @@ class Solution:
         :type s: str
         :type numRows: int
         :rtype: str
-        """
 
-        
